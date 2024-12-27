@@ -1,5 +1,5 @@
 # 编译 typescript
-FROM public-cn-beijing.cr.volces.com/public/node:16-alpine as builder
+FROM node-16-alpine as builder
 
 WORKDIR /opt/application/
 
