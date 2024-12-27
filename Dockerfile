@@ -1,5 +1,5 @@
 # 编译 typescript
-FROM hub.c.163.com/library/node:latest as builder
+FROM public-cn-beijing.cr.volces.com/public/node:16-alpine as builder
 
 WORKDIR /opt/application/
 
@@ -12,7 +12,7 @@ RUN npm install --registry=https://registry.npmmirror.com
 RUN npm run build
 
 # 生产环境镜像，不安装 devDependencies， 减少部署镜像大小
-FROM hub.c.163.com/library/node:latest
+FROM public-cn-beijing.cr.volces.com/public/node:16-alpine
 
 WORKDIR /opt/application/
 
