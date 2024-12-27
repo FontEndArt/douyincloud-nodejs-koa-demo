@@ -7,6 +7,8 @@ const app = new Koa();
 const router = new Router();
 router.get('/', ctx => {
     ctx.body = `Nodejs koa demo project`;
+}).get('/t', ctx => {
+    ctx.body = 't'
 })
 
 app.use(bodyParser());
