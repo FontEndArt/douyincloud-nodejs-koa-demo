@@ -1,5 +1,5 @@
 # 编译 typescript
-FROM node-16-alpine as builder
+FROM hub.c.163.com/library/node-16:latest as builder
 
 WORKDIR /opt/application/
 
