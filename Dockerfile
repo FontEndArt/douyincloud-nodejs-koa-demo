@@ -12,7 +12,7 @@ RUN npm install --registry=https://registry.npmmirror.com
 RUN npm run build
 
 # 生产环境镜像，不安装 devDependencies， 减少部署镜像大小
-FROM node:16-alpine
+FROM hub.c.163.com/library/node:latest
 
 WORKDIR /opt/application/
 
