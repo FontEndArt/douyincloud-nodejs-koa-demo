@@ -9,7 +9,7 @@ router.get('/', ctx => {
     ctx.body = `Nodejs koa demo project`;
 }).get('/t', ctx => {
     const { url } = ctx.query; // 获取查询参数中的 url
-    if (url) {
+    if (typeof url === 'string') {
         ctx.redirect(url); // 跳转到指定的 URL
     }
 })
