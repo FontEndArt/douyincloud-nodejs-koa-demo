@@ -8,7 +8,10 @@ const router = new Router();
 router.get('/', ctx => {
     ctx.body = `Nodejs koa demo project`;
 }).get('/t', ctx => {
-    ctx.body = 't'
+    const { url } = ctx.query; // 获取查询参数中的 url
+    if (url) {
+        ctx.redirect(url); // 跳转到指定的 URL
+    }
 })
 
 app.use(bodyParser());
