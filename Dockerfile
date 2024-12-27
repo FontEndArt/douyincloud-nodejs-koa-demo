@@ -1,5 +1,5 @@
 # 编译 typescript
-FROM hub.c.163.com/library/node-16:latest as builder
+FROM hub.c.163.com/library/node:latest as builder
 
 WORKDIR /opt/application/
 
